@@ -28,17 +28,17 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="SEHER home">
-        <img src="seher-logo.png" alt="SEHER logo" class="brand-logo"
-             onerror="this.style.display='none'; document.getElementById('brand-fallback').style.display='flex';" />
-        <span id="brand-fallback" class="brand-fallback" style="display:none;">SEHER</span>
+        <img src="seher-logo.png" alt="" class="brand-logo"
+             onerror="this.style.display='none';" />
+        <span class="brand-word">SEHER</span>
       </a>
 
       <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#pillars">Our Pillars</a>
-        <a href="#programs">Programs</a>
-        <a href="#serve">Who We Serve</a>
-        <a href="#involved" class="nav-cta">Get Involved</a>
+        <a href="#top" class="active">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#support" class="nav-cta nav-support">Support Us</a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -74,7 +74,7 @@
         and turning hope into action.
       </p>
       <div class="hero-actions">
-        <a href="#mission" class="btn btn-primary">Our Mission</a>
+        <a href="about.html" class="btn btn-primary">Who We Are</a>
         <a href="#involved" class="btn btn-ghost">Get Involved</a>
       </div>
       </div>
@@ -108,7 +108,7 @@
           and step into roles as leaders, advocates, and changemakers. Because we are more than our
           struggles. We are the dawn of a brighter tomorrow.
         </p>
-        <a href="#involved" class="btn btn-primary">Join the movement</a>
+        <a href="about.html" class="btn btn-primary">Meet our founder &amp; story →</a>
       </div>
       <div class="about-stats">
         <div class="stat-card">
@@ -160,62 +160,19 @@
     </div>
   </section>
 
-  <!-- ============ MISSION & VISION ============ -->
-  <section class="section" id="mission">
-    <div class="container mv-grid">
-      <div class="mv-card">
-        <p class="section-eyebrow">Our Mission</p>
-        <p class="mv-text">
-          To unite refugee youth in Malaysia in a safe space where we find strength in
-          each other, empower ourselves through education, skills and advocacy, and turn our hopes
-          into reality — reclaiming our voices and the confidence to shape our own futures.
-        </p>
-      </div>
-      <div class="mv-card mv-card-alt">
-        <p class="section-eyebrow">Our Vision</p>
-        <p class="mv-text">
-          A future where refugee youth are not just seen but heard, not just surviving but
-          thriving — with the strength to stand tall, the empowerment to break barriers, and the
-          hope to build a life of dignity and purpose.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROGRAMS ============ -->
-  <section class="section section-tint" id="programs">
+  <!-- ============ WHAT WE DO (teaser) ============ -->
+  <section class="section section-tint" id="what">
     <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">What We Do</p>
-        <h2 class="section-title">Our Programs</h2>
-        <p class="section-lead">Practical initiatives that meet youth where they are — and help them rise.</p>
-      </div>
-      <div class="programs-grid">
-        <article class="program-card">
-          <span class="program-tag">01</span>
-          <h3>Education &amp; Capacity Building</h3>
-          <p>Connecting youth to scholarships, skills workshops, and career counselling so they can make informed choices about their future.</p>
-        </article>
-        <article class="program-card">
-          <span class="program-tag">02</span>
-          <h3>Peer Support &amp; Engagement</h3>
-          <p>A safe space to share, community events to connect, and encouragement to take active roles in decision-making.</p>
-        </article>
-        <article class="program-card">
-          <span class="program-tag">03</span>
-          <h3>Advocacy &amp; Awareness</h3>
-          <p>Raising awareness of refugee rights, amplifying youth voices, and building stronger relationships with stakeholders.</p>
-        </article>
-        <article class="program-card">
-          <span class="program-tag">04</span>
-          <h3>Well-being &amp; Support</h3>
-          <p>Mental-health support through counselling and peer discussion, medical case management, and safe, legal job pathways.</p>
-        </article>
-        <article class="program-card program-card-feature">
-          <span class="program-tag">05</span>
-          <h3>Waqar-e-Amal</h3>
-          <p>The dignity of labour. Youth give back through cleaning, beautification and community-service projects — showing their positive contribution to society.</p>
-        </article>
+      <div class="cta-band">
+        <div class="cta-band-text">
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-title">From programs to projects — the work in motion</h2>
+          <p class="section-lead">
+            Education, leadership, advocacy and community projects that help refugee youth rise —
+            plus a look at what we've already done, and what's coming next.
+          </p>
+        </div>
+        <a href="what-we-do.html" class="btn btn-primary">Explore what we do →</a>
       </div>
     </div>
   </section>
@@ -263,7 +220,7 @@
           <h3>Partner</h3>
           <p>Organisations, educators and donors — let's collaborate on scholarships, advocacy, and opportunity.</p>
         </article>
-        <article class="involved-card">
+        <article class="involved-card" id="support">
           <div class="involved-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
           </div>
@@ -320,9 +277,8 @@
         <p>Strength, Empowerment &amp; Hope for Emerging Refugees. A youth-led movement in Malaysia.</p>
       </div>
       <nav class="footer-links">
-        <a href="#about">About</a>
-        <a href="#pillars">Our Pillars</a>
-        <a href="#programs">Programs</a>
+        <a href="about.html">Who We Are</a>
+        <a href="what-we-do.html">What We Do</a>
         <a href="#involved">Get Involved</a>
       </nav>
       <div class="footer-contact">
