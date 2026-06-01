@@ -28,7 +28,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
@@ -483,10 +483,11 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
     gap: .25rem; background: var(--cream); padding: 5.5rem 1.5rem 2rem;
     box-shadow: -18px 0 60px -24px rgba(35,52,86,.55);
     border-left: 1px solid rgba(35,52,86,.1);
-    transform: translateX(100%); transition: transform .3s ease; z-index: 10;
+    transform: translateX(100%); visibility: hidden;
+    transition: transform .3s ease, visibility 0s linear .3s; z-index: 10;
     overflow-y: auto;
   }
-  .nav.open { transform: translateX(0); }
+  .nav.open { transform: translateX(0); visibility: visible; transition: transform .3s ease; }
   .nav a {
     font-size: 1.1rem; padding: .85rem .6rem; border-radius: 12px;
     border-bottom: 1px solid rgba(35,52,86,.08);
