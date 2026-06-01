@@ -204,6 +204,12 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
 .founder-photo img { width: 100%; height: 100%; object-fit: cover; }
 .founder-initials { display: none; font-family: "Poppins", sans-serif; font-weight: 800; font-size: 4.5rem; color: #fff; }
 .founder-photo.no-photo .founder-initials { display: block; }
+.founder-highlights {
+  list-style: none; margin: 1.3rem 0 1.4rem; padding: 0; display: grid; gap: .75rem; text-align: left;
+}
+.founder-highlights li { display: flex; align-items: flex-start; gap: .65rem; color: var(--ink); font-size: .98rem; }
+.founder-highlights svg { flex-shrink: 0; width: 21px; height: 21px; color: var(--teal); margin-top: .15rem; }
+.founder-highlights strong { color: var(--teal-deep); }
 .founder-li { gap: .5rem; }
 .founder-role { font-family: "Poppins", sans-serif; font-weight: 600; color: var(--teal-deep); margin: .1rem 0 1.1rem; }
 .founder-copy p { color: var(--muted); }
@@ -491,6 +497,7 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
   .about-grid, .mv-grid, .form-wrap { grid-template-columns: 1fr; gap: 2rem; }
   .founder-card { grid-template-columns: 1fr; gap: 1.8rem; text-align: center; }
   .founder-note { text-align: left; }
+  .founder-highlights { max-width: 440px; margin-inline: auto; }
   .impact-grid { grid-template-columns: 1fr; gap: 1.8rem; }
   .impact-footer { flex-direction: column; align-items: flex-start; }
   .pillars-grid, .programs-grid, .involved-grid { grid-template-columns: 1fr; }
