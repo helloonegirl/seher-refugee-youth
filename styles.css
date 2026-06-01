@@ -262,7 +262,6 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
 .camp-feature { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
 @media (min-width: 700px) {
   .camp-gallery { grid-template-columns: repeat(4, 1fr); }
-  .camp-feature { aspect-ratio: 2.6 / 1; }
 }
 
 /* ---------- Pillars ---------- */
