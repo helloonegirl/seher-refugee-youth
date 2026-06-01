@@ -3,19 +3,28 @@ const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
 
 if (navToggle && nav) {
-  navToggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
+  const setMenu = (open) => {
+    nav.classList.toggle('open', open);
     navToggle.classList.toggle('open', open);
     navToggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setMenu(!nav.classList.contains('open'));
   });
 
   // Close the menu after tapping a link (mobile)
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', () => setMenu(false));
+  });
+
+  // Close when tapping the dimmed area outside the menu
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !navToggle.contains(e.target)) {
+      setMenu(false);
+    }
   });
 }
 
