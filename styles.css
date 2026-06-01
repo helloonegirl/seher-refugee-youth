@@ -477,12 +477,12 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
 =================================================================== */
 @media (max-width: 900px) {
   .nav {
-    position: fixed; inset: 0 0 0 auto; width: min(82%, 300px);
+    position: fixed; inset: 0 auto 0 0; width: min(82%, 300px);
     flex-direction: column; align-items: stretch; justify-content: flex-start;
     gap: .25rem; background: var(--cream); padding: 5.5rem 1.5rem 2rem;
-    box-shadow: -18px 0 60px -24px rgba(35,52,86,.55);
-    border-left: 1px solid rgba(35,52,86,.1);
-    transform: translateX(100%); visibility: hidden;
+    box-shadow: 18px 0 60px -24px rgba(35,52,86,.55);
+    border-right: 1px solid rgba(35,52,86,.1);
+    transform: translateX(-100%); visibility: hidden;
     transition: transform .3s ease, visibility 0s linear .3s; z-index: 10;
     overflow-y: auto;
   }
@@ -500,7 +500,7 @@ body.is-leaving { opacity: 0; transition: opacity .28s ease; }
     z-index: 55;
   }
   body.menu-open { overflow: hidden; }
-  .header-inner { width: 100%; justify-content: space-between; gap: 1rem; }
+  .header-inner { width: 100%; justify-content: space-between; gap: 1rem; backdrop-filter: none; -webkit-backdrop-filter: none; }
   .nav-toggle { display: block; z-index: 20; }
   .nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
