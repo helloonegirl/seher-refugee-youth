@@ -28,7 +28,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
@@ -36,7 +36,6 @@ body {
   background: var(--cream);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--teal-deep); }
