@@ -93,3 +93,21 @@ if (!reduceMotion) {
 window.addEventListener('pageshow', () => {
   document.body.classList.remove('is-leaving');
 });
+
+// ---- Gentle scroll-reveal for project & signature cards ----
+// We add the hidden state via JS, so if JS doesn't run the content stays fully visible.
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const revealEls = document.querySelectorAll(
+    '.section-head, .about-copy, .stat-card, .pillar-card, .program-card, ' +
+    '.involved-card, .mv-card, .serve-inner, .cta-band, .supporter, .form-wrap, ' +
+    '.founder-card, .project, .seen-card, .next-card, .team-card'
+  );
+  revealEls.forEach((el) => el.classList.add('reveal-init'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // Toggle on every entry/exit so it re-animates each time it scrolls into view
+      entry.target.classList.toggle('reveal-in', entry.isIntersecting);
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach((el) => revealObserver.observe(el));
+}
